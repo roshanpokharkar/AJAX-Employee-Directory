@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AJAX Employee Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+
+            <div>
+                <h1>Employee Directory</h1>
+                <p>Remote Data Fetching using AJAX</p>
+            </div>
+
+            <button onclick="fetchEmployees()" class="refresh-btn">
+                ↻ Refresh
+            </button>
+
+        </header>
+
+
+        <!-- Dashboard -->
+        <div class="dashboard">
+
+            <div class="stat">
+                <h2 id="totalEmployees">0</h2>
+                <p>Total Employees</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="visibleEmployees">0</h2>
+                <p>Showing</p>
+            </div>
+
+            <div class="stat">
+                <h2>AJAX</h2>
+                <p>Technology</p>
+            </div>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search employee by name..."
+            >
+
+            <select id="cityFilter">
+
+                <option value="all">
+                    All Cities
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Loading -->
+        <div id="loading">
+
+            <div class="spinner"></div>
+
+            <p>Fetching remote data...</p>
+
+        </div>
+
+
+        <!-- Error -->
+        <div id="error"></div>
+
+
+        <!-- Employee Cards -->
+        <div id="employeeContainer" class="employee-grid"></div>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                AJAX Employee Directory
+            </p>
+
+            <small>
+                HTML • CSS • JavaScript • XMLHttpRequest
+            </small>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
